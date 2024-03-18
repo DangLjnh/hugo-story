@@ -1,0 +1,19 @@
+<!-- Banner -->
+<section class="banner {{ .style }}">
+    <div class="content">
+        {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+        <!-- {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }} -->
+        {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
+        {{ with .button }}<ul class="actions stacked">
+            <div class="icon-mouse">
+                <div class="wrapper-icon-down">
+                    <i class="fa fa-computer-mouse"></i>
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+            </div>
+        </ul>{{ end }}
+    </div>
+    {{ with .image }}<div class="image">
+        <img src="{{.}}" alt="Hugo Story" class="image-banner"/>
+    </div>{{end}}
+</section>

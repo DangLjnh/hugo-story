@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div id="fullpage">
+    <div class="section">
+			{{ partial "banner" site.Data.banner }}
+    </div>
+    <div class="section">
+        {{ partial "spotlight" (dict "Context" site.Data.spotlight1 "Code" "basic-section" "Title" "Basic Astrological Details" "PartialPopup" (partial "basic_chart_popup" (dict "Code" "basic-section" "Title" "Basic Astrological Details"))) }}
+    </div>
+    <div class="section"> 
+			{{ partial "spotlight" (dict "Context" site.Data.spotlight2 "Code" "planet-basic-section" "Title" "The planets" "PartialPopup" (partial "planet-popup" (dict "Code" "planet-basic-section" "Title" "The planets"))) }}
+    </div>
+</div>
+	<!-- {{ partial "spotlight" site.Data.spotlight1 }}
+	{{ partial "spotlight" site.Data.spotlight2 }}
+	{{ partial "spotlight" site.Data.spotlight3 }}
+	{{ partial "gallery" site.Data.gallery }}
+	{{ partial "items" site.Data.items }}
+	{{ partial "elements" . }}
+	{{ partial "elements_reference" . }}
+	{{ partial "footer" . }} -->
+
+{{ end }}

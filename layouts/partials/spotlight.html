@@ -1,0 +1,14 @@
+<!-- Spotlight -->
+<section class="spotlight {{ .Context.style }}"{{ with .Context.id }} id="{{ . }}"{{ end }}>
+    <div class="content">
+        {{ with .Context.title }}<h2>{{ . }}</h2>{{ end }}
+        {{ with .Context.content }}<p>{{ . | safeHTML }}</p>{{ end }}
+        {{ with .Context.button }}<ul class="actions stacked">
+            <li><a href="{{ .Context.link }}" class="button">{{ .label }}</a></li>
+        </ul>{{ end }}
+        {{ partial "btn-popup" (dict "Code" .Code "Title" .Title "PartialPopup" .PartialPopup)}}
+    </div>
+    {{ with .Context.image }}<div class="image">
+        <img src="{{ . }}" alt="" />
+    </div>{{ end }}
+</section>
